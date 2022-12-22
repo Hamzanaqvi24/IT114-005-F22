@@ -35,4 +35,3 @@ public class RoomListItem extends JPanel {
     public String getRoomName() {
         return roomName.getText();
     }
-}

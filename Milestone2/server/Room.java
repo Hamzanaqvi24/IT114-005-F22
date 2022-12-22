@@ -52,7 +52,11 @@ public class Room implements AutoCloseable {
 		Random rand = new Random();
 		int roll = rand.nextInt(6)+1;
 		message = Integer.toString(roll);
+
 		sendMessage (client, "#b# rolled a #b#" + message);
+
+		sendMessage (client, "<b> rolled a </b>" + message);
+
 
 	}
 	protected void flip (String message, ServerThread client) 
@@ -66,6 +70,12 @@ public class Room implements AutoCloseable {
 				else
 				{
 					sendMessage(client, String.format("#r# Tails #r#"));
+
+					sendMessage(client, String.format("<b> Heads </b>"));
+                }
+				else
+				{
+					sendMessage(client, String.format("<b> Tails </b>"));
                 }
         }
 

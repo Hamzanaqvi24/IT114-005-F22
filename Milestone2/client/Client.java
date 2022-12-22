@@ -221,4 +221,3 @@ public enum Client {
             System.out.println("Server was never opened so this exception is ok");
         }
     }
-}

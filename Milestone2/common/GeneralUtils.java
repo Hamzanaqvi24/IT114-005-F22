@@ -39,4 +39,3 @@ public abstract class GeneralUtils {
         GeneralUtils.randomRange(80, 251));
         return '#' + Integer.toHexString(color.getRGB() & 0xffffff | 0x1000000).substring(1);
     }
-}

@@ -46,12 +46,17 @@ public class Room implements AutoCloseable {
 	public boolean isRunning() {
 		return isRunning;
 	}
-	
+
+	//Hamza Naqvi IT114-005 Han3 12/19/22
+
 	protected void roll (String message, ServerThread client) 
 	{
 		Random rand = new Random();
 		int roll = rand.nextInt(6)+1;
 		message = Integer.toString(roll);
+
+		sendMessage (client, "#b# rolled a #b#" + message);
+
 		sendMessage (client, "<b> rolled a </b>" + message);
 
 	}
@@ -61,6 +66,12 @@ public class Room implements AutoCloseable {
 		int flip = rand.nextInt(2)+1;
                 if (flip == 1)
 				{
+					sendMessage(client, String.format("#r# Heads #r#"));
+                }
+				else
+				{
+					sendMessage(client, String.format("#r# Tails #r#"));
+
 					sendMessage(client, String.format("<b> Heads </b>"));
                 }
 				else
